@@ -1,0 +1,370 @@
+@charset "UTF-8";
+.navigation {
+  height: 72px;
+  background: #262626;
+  position: relative;
+  top: -22px;
+  width: 100%;
+}
+
+.brand {
+  position: absolute;
+  padding-left: 20px;
+  float: left;
+  line-height: 70px;
+  text-transform: uppercase;
+  font-size: 1.4em;
+}
+.brand a,
+.brand a:visited {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.nav-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+nav {
+  float: right;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav ul li {
+  float: left;
+  position: relative;
+}
+nav ul li a,
+nav ul li a:visited {
+  display: block;
+  padding: 0 20px;
+  line-height: 70px;
+  background: #262626;
+  color: #ffffff;
+  text-decoration: none;
+}
+nav ul li a:hover,
+nav ul li a:visited:hover {
+  background: #2581DC;
+  color: #ffffff;
+}
+nav ul li a:not(:only-child):after,
+nav ul li a:visited:not(:only-child):after {
+  padding-left: 4px;
+  content: " ▾";
+}
+nav ul li ul li {
+  min-width: 190px;
+}
+nav ul li ul li a {
+  padding: 15px;
+  line-height: 20px;
+}
+
+.nav-dropdown {
+  position: absolute;
+  display: none;
+  z-index: 1;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Mobile navigation */
+.nav-mobile {
+  display: none;
+  position: absolute;
+  top: 5px;
+  right: 0;
+  height: 70px;
+  width: 70px;
+}
+
+@media only screen and (max-width: 798px) {
+  .nav-mobile {
+    display: block;
+  }
+
+  nav {
+    width: 100%;
+    padding: 70px 0 15px;
+  }
+  nav ul {
+    display: none;
+  }
+  nav ul li {
+    float: none;
+  }
+  nav ul li a {
+    padding: 15px;
+    line-height: 20px;
+  }
+  nav ul li ul li a {
+    padding-left: 30px;
+  }
+
+  .nav-dropdown {
+    position: static;
+  }
+}
+@media screen and (min-width: 799px) {
+  .nav-list {
+    display: block !important;
+  }
+}
+#nav-toggle {
+  position: absolute;
+  left: 18px;
+  top: 22px;
+  cursor: pointer;
+  padding: 10px 35px 16px 0px;
+}
+#nav-toggle span,
+#nav-toggle span:before,
+#nav-toggle span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 5px;
+  width: 35px;
+  background: #ffffff;
+  position: absolute;
+  display: block;
+  content: "";
+  transition: all 300ms ease-in-out;
+}
+#nav-toggle span:before {
+  top: -10px;
+}
+#nav-toggle span:after {
+  bottom: -10px;
+}
+#nav-toggle.active span {
+  background-color: transparent;
+}
+#nav-toggle.active span:before, #nav-toggle.active span:after {
+  top: 0;
+}
+#nav-toggle.active span:before {
+  transform: rotate(45deg);
+}
+#nav-toggle.active span:after {
+  transform: rotate(-45deg);
+}
+
+article {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+  }
+
+  .initial {
+    width: 100%;
+  }
+
+  .there, .firstH1, .firstH2 {
+    font-size: 20px;
+  }
+
+  .there, .firstH1, .cursor, .app__text-line--1 {
+    position: relative;
+    right: 120px;
+    width: 100%;
+  }
+
+  .firstH2, .firstI {
+    position: relative;
+    left: 150px;
+    top: -35px;
+  }
+
+  .firstI {
+    font-size: 40px;
+  }
+
+  .mouse_scroll {
+    display: inline;
+    position: relative;
+    top: -1100px;
+    left: 50%;
+    margin: 0 auto;
+    width: 24px;
+    height: 100px;
+  }
+
+  nav, ul {
+    height: 600px;
+  }
+
+  .cont {
+    position: relative;
+    top: -350px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .myPhoto {
+    margin-top: -400px;
+    width: 100%;
+    height: 500px;
+  }
+
+  .bild {
+    display: none;
+  }
+
+  .titr {
+    opacity: 1;
+    position: relative;
+    top: -120px;
+    overflow: visible;
+    text-align: center;
+    left: 40%;
+  }
+
+  .acc {
+    opacity: 1;
+    position: relative;
+    top: -110px;
+    width: 100%;
+  }
+
+  #scroll-up {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .lb {
+    width: 200%;
+  }
+
+  .cb {
+    height: 220px;
+  }
+
+  .hobby-list-div {
+    height: 220px;
+  }
+
+  .matn {
+    font-size: 15px;
+  }
+
+  .icons, .mm {
+    display: none;
+  }
+
+  .a {
+    font-size: 15px;
+  }
+
+  .sec-icons {
+    display: block;
+  }
+
+  .myWorks {
+    opacity: 1;
+    margin-top: 200px;
+    width: 100%;
+    height: 500px;
+    background-size: contain;
+  }
+
+  .works {
+    opacity: 1;
+    overflow: visible;
+    position: relative;
+    left: 40%;
+    color: #FFF;
+  }
+
+  .car1, .car2, .car3 {
+    opacity: 1;
+  }
+
+  .car2 {
+    height: 250px;
+    width: 100%;
+  }
+
+  .skills-to-hide {
+    display: block;
+    margin-top: -60px;
+  }
+
+  .skills-to-show {
+    display: none;
+  }
+
+  .mySkill, .myP {
+    position: relative;
+    top: 70px;
+    text-align: center;
+  }
+
+  .top2 {
+    margin-top: 80px;
+    overflow: scroll;
+    overflow-y: hidden;
+  }
+
+  .myBtn {
+    width: 100px;
+    height: 50px;
+    font-size: 18px;
+  }
+
+  .footer-list-1 {
+    font-size: 18px;
+  }
+
+  .white {
+    height: 30px;
+    width: 30px;
+    margin-top: 40px;
+  }
+
+  .cv {
+    margin-top: -60px;
+  }
+
+  .cv-btn {
+    width: 100px;
+    height: 50px;
+  }
+
+  .end {
+    font-size: 15px;
+  }
+}
+@media (min-width: 481px) and (max-width: 767px) {
+  html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+  }
+
+  .mouse_scroll2 {
+    display: block;
+    position: relative;
+    top: -200px;
+    left: 50%;
+    margin: 0 auto;
+    width: 24px;
+    height: 100px;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

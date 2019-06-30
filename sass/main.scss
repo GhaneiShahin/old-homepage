@@ -1,0 +1,344 @@
+// Navigation Variables
+$content-width: 1000px;
+$breakpoint: 799px;
+$nav-height: 70px;
+$nav-background: #262626;
+$nav-font-color: #ffffff;
+$link-hover-color: #2581DC;
+
+// Outer navigation wrapper
+.navigation {
+    height: 72px;
+    background: $nav-background;
+    position: relative;
+    top: -22px;
+    width: 100%;
+}
+
+// Logo and branding
+.brand {
+    position: absolute;
+    padding-left: 20px;
+    float: left;
+    line-height: $nav-height;
+    text-transform: uppercase;
+    font-size: 1.4em;
+    a,
+    a:visited {
+    color: $nav-font-color;
+    text-decoration: none;
+    }
+}
+
+// Container with no padding for navbar
+.nav-container {
+    max-width: $content-width;
+    margin: 0 auto;
+}
+
+// Navigation 
+nav {
+    float: right;
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    li {
+        float: left;
+        position: relative;
+        a,
+        a:visited {
+            display: block;
+            padding: 0 20px;
+            line-height: $nav-height;
+            background: $nav-background;
+            color: $nav-font-color;
+            text-decoration: none;
+        &:hover {
+            background: $link-hover-color;
+            color: $nav-font-color;
+        }
+        &:not(:only-child):after {
+            padding-left: 4px;
+            content: ' ▾';
+            }
+        }
+        ul li {
+            min-width: 190px;
+        a {
+            padding: 15px;
+            line-height: 20px;
+            }
+        }
+    }
+    }
+}
+
+// Dropdown list binds to JS toggle event
+.nav-dropdown {
+    position: absolute;
+    display: none;
+    z-index: 1;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Mobile navigation */
+
+// Binds to JS Toggle
+.nav-mobile {
+    display: none;
+    position: absolute;
+    top: 5px;
+    right: 0;
+    height: $nav-height;
+    width: $nav-height;
+}
+@media only screen and (max-width: 798px) {
+  // Hamburger nav visible on mobile only
+    .nav-mobile {
+    display: block;
+}
+    nav {
+        width: 100%;
+        padding: $nav-height 0 15px;
+        ul {
+            display: none;
+            li {
+                float: none;
+                a {
+                    padding: 15px;
+                    line-height: 20px;
+                }
+                ul li a {
+                    padding-left: 30px;
+                }
+            }
+        }
+    }
+.nav-dropdown {
+    position: static;
+}
+}
+@media screen and (min-width: $breakpoint) {
+    .nav-list {
+        display: block !important;
+    }
+}
+#nav-toggle {
+    position: absolute;
+    left: 18px;
+    top: 22px;
+    cursor: pointer;
+    padding: 10px 35px 16px 0px;
+    span,
+    span:before,
+    span:after {
+        cursor: pointer;
+        border-radius: 1px;
+        height: 5px;
+        width: 35px;
+        background: $nav-font-color;
+        position: absolute;
+        display: block;
+        content: '';
+        transition: all 300ms ease-in-out;
+    }
+span:before {
+    top: -10px;
+}
+span:after {
+    bottom: -10px;
+}
+&.active span {
+    background-color: transparent;
+    &:before,
+    &:after {
+        top: 0;
+    }
+    &:before {
+        transform: rotate(45deg);
+    }
+    &:after {
+        transform: rotate(-45deg);
+    }
+    }
+}
+
+// Page content 
+article {
+    max-width: $content-width;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+
+//Device = Most of the Smartphones Mobiles (Portrait)
+
+@media (min-width: 320px) and (max-width: 480px) {
+    html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+    .initial{
+        width: 100%;
+    }
+    .there, .firstH1, .firstH2{
+        font-size: 20px;
+    }
+    .there, .firstH1, .cursor, .app__text-line--1{
+        position: relative;
+        right: 120px;
+        width: 100%;
+    }
+    .firstH2, .firstI{
+        position: relative;
+        left: 150px;
+        top: -35px;
+    }
+    .firstI{
+        font-size: 40px;
+    }
+    .mouse_scroll {
+        display: inline;
+        position: relative;
+        top: -1100px;
+        left: 50%;
+        margin: 0 auto;
+        width: 24px;
+        height: 100px;
+    }
+    nav, ul{
+        height: 600px;
+    }
+    .cont{
+        position: relative;
+        top: -350px;
+        margin: 0 auto;
+        width: 100%;
+    }
+    .myPhoto{
+        margin-top: -400px;
+        width: 100%;
+        height: 500px;
+    }
+    .bild{
+        display: none;
+    }
+    .titr{
+        opacity: 1;
+        position: relative;
+        top: -120px;
+        overflow: visible;
+        text-align: center;
+        left: 40%;
+    }
+    .acc{
+        opacity: 1;
+        position: relative;
+        top: -110px;
+        width: 100%;
+    }
+    #scroll-up{
+        opacity: 1;
+        visibility: visible;
+    }
+    .lb{
+        width: 200%;
+    }
+    .cb{
+        height: 220px;
+    }
+    .hobby-list-div{
+        height: 220px;
+    }
+    .matn{
+        font-size: 15px;
+    }
+    .icons, .mm{
+        display: none;
+    }
+    .a{
+        font-size: 15px;
+    }
+    .sec-icons{
+        display: block;
+    }
+    .myWorks{
+        opacity: 1;
+        margin-top: 200px;
+        width: 100%;
+        height: 500px;
+        background-size: contain;
+    }
+    .works{
+        opacity: 1;
+        overflow: visible;
+        position: relative;
+        // left: 40%;
+        color: #FFF;
+    }
+    .car1, .car2, .car3{
+        opacity: 1;
+    }
+    .car2{
+        height: 250px;
+        width: 100%;
+    }
+
+    .skills-to-hide{
+        display: block;
+        margin-top: -60px;
+    }
+    .skills-to-show{
+        display: none;
+    }
+    .mySkill, .myP{
+        position: relative;
+        top: 70px;
+        text-align: center;
+    }
+    .top2{
+        margin-top: 80px;
+        overflow: scroll;
+        overflow-y: hidden;
+    }
+    .myBtn{
+        width: 100px;
+        height: 50px;
+        font-size: 18px;
+    }
+    .footer-list-1{
+        font-size: 18px;
+    }
+    .white{
+        height: 30px;
+        width: 30px;
+        margin-top: 40px;
+    }
+    .cv{
+        margin-top: -60px;
+    }
+    .cv-btn{
+        width: 100px;
+        height: 50px;
+    }
+    .end{
+        font-size: 15px;
+    }
+    .scroll{
+        margin-top: 500px;
+    }
+
+
+}
+
+
+
+
+
+
+
